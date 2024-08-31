@@ -1,5 +1,6 @@
 {
   "name": "@ericc/env",
+  "version": "0.0.1",
   "exports": {
     "./node": "./src/node.ts",
     "./bun": "./src/bun.ts",
