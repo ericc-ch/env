@@ -1,8 +1,11 @@
 {
-  "tasks": {
-    "dev": "deno run --watch main.ts"
+  "name": "@ericc/env",
+  "exports": {
+    "./node": "./src/node.ts",
+    "./bun": "./src/bun.ts",
+    "./deno": "./src/deno.ts"
   },
-  "imports": {
-    "@std/assert": "jsr:@std/assert@1"
+  "publish": {
+    "exclude": [".vscode/"]
   }
 }
