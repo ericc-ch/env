@@ -1,6 +1,12 @@
 {
   "name": "@ericc/env",
-  "version": "0.0.2g",
+  "version": "0.0.2",
+  "tasks": {
+    "build_npm": {
+      "command": "deno run scripts/build_npm.ts",
+      "description": "Build the bundle for publishing to npm"
+    }
+  },
   "exports": {
     "./node": "./src/node.ts",
     "./bun": "./src/bun.ts",
