@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "tasks": {
     "build_npm": {
-      "command": "deno run scripts/build_npm.ts",
+      "command": "deno run -A scripts/build_npm.ts",
       "description": "Build the bundle for publishing to npm"
     }
   },
