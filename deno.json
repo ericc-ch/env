@@ -1,12 +1,15 @@
 {
   "name": "@ericc/env",
-  "version": "0.0.1",
+  "version": "0.0.2g",
   "exports": {
     "./node": "./src/node.ts",
     "./bun": "./src/bun.ts",
     "./deno": "./src/deno.ts"
   },
   "publish": {
-    "exclude": [".vscode/"]
+    "exclude": [".vscode/", ".npm", "scripts/"]
+  },
+  "imports": {
+    "@deno/dnt": "jsr:@deno/dnt@^0.41.3"
   }
 }
