@@ -1,6 +1,6 @@
 # @ericc/env
 
-> Small, cross runtime utility function to get environment variables.
+> A simple wrapper around std-env, re-exporting all its functionality while providing a convenient interface for environment variable handling.
 
 ## Installation
 
@@ -14,7 +14,7 @@ deno add jsr:@ericc/env
 
 ## Why?
 
-Because I found myself repeatedly writing this utility function in order to:
+This package serves as a wrapper around std-env, re-exporting all of its functionality while also providing a simplified interface for common environment variable operations:
 
 1. Throw when required environment variable does not exist
 2. Fallback to default value for optional variable
@@ -23,22 +23,17 @@ Because I found myself repeatedly writing this utility function in order to:
 ## Usage
 
 ```typescript
-// Use whichever runtime fits your needs
-import { env } from "@ericc/env/node"; // For Node.js
-import { env } from "@ericc/env/deno"; // For Deno
-import { env } from "@ericc/env/bun"; // For Bun
+import { getEnv, env } from "@ericc/env";
 
-// Required env variable (throws if not found)
-const API_KEY = env("API_KEY");
+// Using getEnv helper
+const API_KEY = getEnv("API_KEY"); // throws if not found
+const IMAGE_DIR = getEnv("IMAGE_DIR", "/tmp"); // with fallback
 
-// Optional env variable with default value
-const IMAGE_DIR = env("IMAGE_DIR", "/tmp");
+// Direct access to std-env exports
+console.log(env.NODE_ENV);
+console.log(env.platform);
 ```
 
 ## Related
 
-Use [@cross/env](https://jsr.io/@cross/env) if you need more environment variable utility functions.
-
-## License
-
-See [LICENSE](./LICENSE) file for details.
+Check out [std-env](https://github.com/unjs/std-env) because [unjs](https://github.com/unjs) is awesome.
