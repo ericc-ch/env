@@ -8,14 +8,13 @@
     }
   },
   "exports": {
-    "./node": "./src/node.ts",
-    "./bun": "./src/bun.ts",
-    "./deno": "./src/deno.ts"
+    ".": "./src/main.ts"
   },
   "publish": {
     "exclude": [".vscode/", ".npm", "scripts/"]
   },
   "imports": {
-    "@deno/dnt": "jsr:@deno/dnt@^0.41.3"
+    "@deno/dnt": "jsr:@deno/dnt@^0.41.3",
+    "std-env": "npm:std-env@^3.8.0"
   }
 }

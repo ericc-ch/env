@@ -13,16 +13,8 @@ await build({
   packageManager: "pnpm",
   entryPoints: [
     {
-      name: "./bun",
-      path: "./src/bun.ts",
-    },
-    {
-      name: "./node",
-      path: "./src/node.ts",
-    },
-    {
-      name: "./deno",
-      path: "./src/deno.ts",
+      name: ".",
+      path: "./src/main.ts",
     },
   ],
   outDir: OUTPUT_DIR,
@@ -31,7 +23,6 @@ await build({
   scriptModule: false,
   test: false,
   package: {
-    // package.json properties
     name: PACKAGE_NAME,
     version: VERSION,
     description:
