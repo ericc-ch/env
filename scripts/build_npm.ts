@@ -5,7 +5,7 @@ const OUTPUT_DIR = "./.npm";
 const OUTPUT_LICENSE = OUTPUT_DIR + "/LICENSE";
 const OUTPUT_README = OUTPUT_DIR + "/README.md";
 const PACKAGE_NAME = "@echristian/env";
-const VERSION = "0.0.3";
+const VERSION = "0.0.4";
 
 await emptyDir(OUTPUT_DIR);
 
@@ -31,6 +31,9 @@ await build({
     repository: {
       type: "git",
       url: "git+https://github.com/ericc-ch/env.git",
+    },
+    dependencies: {
+      "std-env": "^3.8.0",
     },
     bugs: {
       url: "https://github.com/ericc-ch/env/issues",
