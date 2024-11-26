@@ -1,6 +1,6 @@
 {
   "name": "@ericc/env",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "tasks": {
     "build_npm": {
       "command": "deno run -A scripts/build_npm.ts",

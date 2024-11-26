@@ -5,7 +5,7 @@ const OUTPUT_DIR = "./.npm";
 const OUTPUT_LICENSE = OUTPUT_DIR + "/LICENSE";
 const OUTPUT_README = OUTPUT_DIR + "/README.md";
 const PACKAGE_NAME = "@echristian/env";
-const VERSION = "0.0.2";
+const VERSION = "0.0.3";
 
 await emptyDir(OUTPUT_DIR);
 
