@@ -1,20 +1,26 @@
 # @ericc/env
 
-> A simple wrapper around std-env, re-exporting all its functionality while providing a convenient interface for environment variable handling.
+> A simple wrapper around std-env, providing a convenient interface for environment variable handling.
 
 ## Installation
 
 ```bash
-npm i @echristian/env
+npm i @echristian/env std-env
 ```
 
 ```bash
-deno add jsr:@ericc/env
+deno add jsr:@ericc/env jsr:@std/env
 ```
+
+## Dependencies
+
+This package requires `std-env` as a peer dependency. Make sure to install it alongside this package:
+
+- `std-env` >= 3.0.0
 
 ## Why?
 
-This package serves as a wrapper around std-env, re-exporting all of its functionality while also providing a simplified interface for common environment variable operations:
+This package provides a simplified interface for common environment variable operations:
 
 1. Throw when required environment variable does not exist
 2. Fallback to default value for optional variable
@@ -23,13 +29,14 @@ This package serves as a wrapper around std-env, re-exporting all of its functio
 ## Usage
 
 ```typescript
-import { getEnv, env } from "@ericc/env";
+import { getEnv } from "@ericc/env";
+import { env } from "std-env";
 
 // Using getEnv helper
 const API_KEY = getEnv("API_KEY"); // throws if not found
 const IMAGE_DIR = getEnv("IMAGE_DIR", "/tmp"); // with fallback
 
-// Direct access to std-env exports
+// Use std-env directly for its exports
 console.log(env.NODE_ENV);
 console.log(env.platform);
 ```
