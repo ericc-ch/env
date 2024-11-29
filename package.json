@@ -1,8 +1,10 @@
 {
-  "name": "@echristian/package-starter",
+  "name": "@echristian/env",
   "version": "0.0.5",
-  "description": "This is a package starter",
-  "keywords": [],
+  "description": "Small wrapper around std-env",
+  "keywords": [
+    "utils"
+  ],
   "license": "MIT",
   "author": "Erick Christian <erickchristian48@gmail.com> (https://github.com/ericc-ch)",
   "type": "module",
