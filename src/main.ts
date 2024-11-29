@@ -11,7 +11,7 @@ export const getEnv = (key: string, fallback?: string): string => {
   if (!value && !fallback)
     throw new Error(`Environment variable ${key} is not set`);
 
-  return value ?? (fallback as string);
+  return value ?? fallback!;
 };
 
 export * from "std-env";
