@@ -8,7 +8,8 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/main.mjs"
+      "import": "./dist/main.mjs",
+      "require": "./dist/main.cjs"
     }
   },
   "main": "./dist/main.mjs",
