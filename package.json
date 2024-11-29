@@ -23,7 +23,8 @@
   },
   "devDependencies": {
     "@echristian/eslint-config": "^0.0.5",
-    "eslint": "^9.15.0"
+    "eslint": "^9.15.0",
+    "unbuild": "^2.0.0"
   },
   "peerDependencies": {
     "std-env": ">= 3.0.0"
