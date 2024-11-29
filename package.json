@@ -21,9 +21,12 @@
     "lint": "eslint .",
     "prepack": "unbuild"
   },
-  "packageManager": "pnpm@9.14.2",
   "devDependencies": {
     "@echristian/eslint-config": "^0.0.5",
     "eslint": "^9.15.0"
-  }
+  },
+  "peerDependencies": {
+    "std-env": ">= 3.0.0"
+  },
+  "packageManager": "pnpm@9.14.2"
 }
