@@ -8,10 +8,6 @@
 npm i @echristian/env std-env
 ```
 
-```bash
-deno add jsr:@ericc/env jsr:@std/env
-```
-
 ## Dependencies
 
 This package requires `std-env` as a peer dependency. Make sure to install it alongside this package:
